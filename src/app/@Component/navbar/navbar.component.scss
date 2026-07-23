@@ -34,7 +34,13 @@
     align-items: center;
     gap: 0.5rem;
     img {
+      transition: 200ms;
+      cursor: pointer;
       height: 50px;
+      &:hover {
+        transition: 200ms;
+        transform: scale(1.05);
+      }
     }
     .logo-text {
       color: var(--light-text);

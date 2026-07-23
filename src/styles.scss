@@ -183,6 +183,7 @@ body {
 
 @media (min-width: 992px) {
   .section {
+    padding: 4rem;
     min-height: calc(100vh - var(--navbar-height-pc));
     height: fit-content;
   }
@@ -194,6 +195,7 @@ body {
   }
 
   .section {
+    padding: 2rem;
     min-height: calc(100vh - var(--navbar-height-mobile));
     height: fit-content;
   }

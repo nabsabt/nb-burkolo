@@ -1,0 +1,42 @@
+.section,
+.title-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
+  background-color: var(--black-bg-dark);
+  justify-content: center;
+  gap: 2rem;
+
+  table {
+    th,
+    td {
+      padding: 1rem;
+    }
+    border: 1px solid var(--grey-border);
+    caption {
+      color: var(--yellow-primary);
+    }
+    thead {
+      background-color: var(--dark-grey-table-header);
+      color: var(--yellow-primary);
+    }
+    tbody {
+      tr {
+        border: 1px solid var(--grey-border);
+        height: 4rem;
+
+        &:nth-child(even) {
+          background-color: var(--black-bg-lighter);
+        }
+        th {
+          color: var(--light-text);
+        }
+        td {
+          color: var(--yellow-primary);
+        }
+      }
+    }
+  }
+}
