@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <button
+      class="navbar-toggler mx-auto"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div #navbarSupportedContent class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="navbar-content">
+        <div class="logo-container">
+          <img src="assets/imgs/logo_light_large_textured.png" loading="lazy" />
+          <div class="logo-text">
+            <p class="txt-l">Nagy Bence</p>
+            <p class="txt-m">Burkoló</p>
+          </div>
+        </div>
+        <div class="menu-buttons">
+          <button [routerLink]="['']" fragment="services" class="menu-btn">Szolgáltatások</button>
+          <button [routerLink]="['']" fragment="prices" class="menu-btn">Árak</button>
+          <button [routerLink]="['']" fragment="portfolio" class="menu-btn">Portfólió</button>
+          <button [routerLink]="['']" fragment="contact" class="menu-btn">Kapcsolat</button>
+          <button [routerLink]="['']" fragment="tender" class="primary-btn">Ajánlatkérés</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

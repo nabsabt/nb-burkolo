@@ -1,0 +1,79 @@
+.home-container {
+  overflow-y: auto;
+  .hero-section {
+    //Background image setup
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to right, var(--black-bg-dark) 40%, rgba(255, 255, 255, 0) 100%);
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1.5s ease-in;
+    }
+    //the actual text content style
+    .text-content {
+      display: flex;
+      flex-direction: column;
+      padding: 4rem 2rem;
+      gap: 1rem;
+      span {
+        line-height: 3rem;
+      }
+      .desc {
+        line-height: 1.5rem;
+      }
+      .stats {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .stat-block {
+          padding: 0.5rem;
+          display: flex;
+          flex-direction: column;
+          span {
+            line-height: 1.5rem;
+          }
+          &:nth-child(even) {
+            border-left: 1px solid var(--grey-border);
+            border-right: 1px solid var(--grey-border);
+          }
+        }
+      }
+    }
+  }
+}
+
+.img-hidden {
+  opacity: 0;
+}
+
+.img-visible {
+  opacity: 1 !important;
+}
+
+@media (min-width: 768px) {
+  .home-container {
+    .text-content {
+      .desc {
+        width: 30vw;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    .text-content {
+      .desc {
+        width: 60vw;
+      }
+    }
+  }
+}

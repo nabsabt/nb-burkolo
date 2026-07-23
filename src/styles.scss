@@ -1,1 +1,200 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'bootstrap/scss/bootstrap';
+/* @font-face {
+  font-family: 'SpaceGrotesk';
+  src: url('/assets/fonts/SpaceGrotesk-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SpaceGrotesk';
+  src: url('/assets/fonts/SpaceGrotesk-Bold.ttf') format('ttf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SpaceGrotesk';
+  src: url('/assets/fonts/SpaceGrotesk-Light.ttf') format('ttf');
+  font-weight: light;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SpaceGrotesk';
+  src: url('/assets/fonts/SpaceGrotesk-Medium.ttf') format('ttf');
+  font-weight: medium;
+  font-style: normal;
+} */
+
+@font-face {
+  font-family: 'SpaceGrotesk';
+  src: url('./assets/fonts/SpaceGrotesk-VariableFont_wght.ttf') format('truetype');
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  min-height: 100vh; /* fallback */
+  min-height: 100dvh; /* preferred */
+  padding: 0;
+  margin: 0;
+  font-family: 'SpaceGrotesk';
+  //overflow: hidden;
+}
+
+:root {
+  --black-bg-dark: #1a1a18;
+  --light-text: #f0ead8;
+  --grey-border: #333330;
+  --grey-inputfield: #252522;
+  --yellow-primary: #c9a84c;
+  --black-bg-lighter: #2c2c28;
+  --yellow-secondary: #c2c26f;
+  --dark-grey-card-bg: #222220;
+  --dark-grey-table-header: #3a3a35;
+
+  --button-hovered: #b1923c;
+  --button-clicked: #9c7f30;
+
+  --menu-button-hovered: #2c2c28;
+  --menu-button-clicked: #3a3a35;
+
+  --navbar-height-pc: 75px;
+  --navbar-height-mobile: 65px;
+}
+
+.txt-light {
+  color: var(--light-text);
+}
+.txt-yellow {
+  color: var(--yellow-primary);
+}
+
+.bold {
+  font-weight: 800;
+}
+.semi-bold {
+  font-weight: 700;
+}
+.thin {
+  font-weight: 100;
+}
+
+.txt-xs {
+  font-size: 0.5rem;
+}
+.txt-s {
+  font-size: 0.7rem;
+}
+.txt-m {
+  font-size: 1rem;
+}
+.txt-l {
+  font-size: 1.2rem;
+}
+
+.txt-xl {
+  font-size: 1.5rem;
+}
+
+.txt-xxl {
+  font-size: 1.7rem;
+}
+
+.txt-huge {
+  font-size: 2.5rem;
+}
+
+.primary-btn {
+  transition: 300ms;
+  height: 3rem;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: bold;
+  width: auto;
+  display: inline-flex;
+  align-items: center;
+  padding: 0rem 1.4rem;
+  border-radius: 3px;
+  background-color: var(--yellow-primary);
+  color: var(--black-bg-lighter);
+  border: none;
+
+  &:hover {
+    transition: 300ms;
+    background-color: var(--button-hovered); // hover bg
+  }
+
+  &:active,
+  &.active {
+    transition: 100ms;
+
+    background-color: var(--button-clicked); // clicked bg
+
+    transform: translateY(1px);
+  }
+}
+
+.primary-btn-dark {
+  @extend .primary-btn;
+  background-color: var(--black-bg-dark);
+  color: var(--light-text);
+  &:hover {
+    background-color: var(--menu-button-hovered);
+  }
+  &:active,
+  &.active {
+    background-color: var(--menu-button-clicked); // clicked bg
+  }
+}
+
+.menu-btn {
+  transition: 300ms;
+  height: 2rem;
+  font-family: inherit;
+  font-size: 1rem;
+  width: auto;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.7rem 1.4rem;
+  border-radius: 3px;
+  background-color: transparent;
+  color: var(--yellow-primary);
+  border: none;
+  text-align: center;
+
+  &:hover {
+    transition: 300ms;
+    background-color: var(--menu-button-hovered); // hover bg
+  }
+
+  &:active,
+  &.active {
+    transition: 100ms;
+
+    background-color: var(--menu-button-clicked); // clicked bg
+
+    transform: translateY(1px);
+  }
+}
+
+@media (min-width: 992px) {
+  .section {
+    min-height: calc(100vh - var(--navbar-height-pc));
+    height: fit-content;
+  }
+}
+
+@media (max-width: 992px) {
+  .menu-btn {
+    border: 1px solid var(--grey-border);
+  }
+
+  .section {
+    min-height: calc(100vh - var(--navbar-height-mobile));
+    height: fit-content;
+  }
+}
