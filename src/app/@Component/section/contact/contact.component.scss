@@ -1,0 +1,110 @@
+.section,
+.highlight-contacts-container,
+.details-container,
+.title,
+.action,
+.action-phone,
+.description-container,
+.contact-list,
+.img-wrapper,
+.title-section {
+  display: flex;
+}
+.section {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0rem 0;
+  background-color: var(--black-bg-dark);
+}
+
+.highlight-contacts-container,
+.details-container {
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 4rem;
+}
+
+.highlight-contacts-container {
+  background-color: var(--yellow-primary);
+
+  .title {
+    flex-direction: column;
+    justify-content: start;
+    //gap: 1rem;
+  }
+  .action {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    .action-phone {
+      flex-direction: column;
+      align-items: start;
+      a {
+        color: var(--black-bg-dark);
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.details-container {
+  background-color: var(--black-bg-dark);
+  align-items: center;
+  gap: 2rem;
+  .description-container {
+    flex-direction: column;
+    align-items: start;
+    min-width: 50%;
+    max-width: 500px;
+    gap: 0.5rem;
+    .title-section {
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+      .img-wrapper {
+        background-color: var(--yellow-primary);
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        border-radius: 4px;
+        img {
+          margin: 5px 5px;
+          width: 50px;
+        }
+      }
+    }
+  }
+  .contact-list {
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+    img {
+      width: 40px;
+      margin-right: 10px;
+    }
+  }
+}
+
+.clickable {
+  a {
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .contact-list {
+    border-top: solid 1px var(--yellow-primary);
+    padding-top: 1rem;
+  }
+  .action {
+    //border-top: solid 1px var(--black-bg-dark);
+    padding-top: 1rem;
+  }
+  .highlight-contacts-container,
+  .details-container {
+    padding: 2rem;
+  }
+}

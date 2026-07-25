@@ -4,12 +4,13 @@ import { ActivatedRoute } from '@angular/router';
 import { ServicesComponent } from '../section/services/services.component';
 import { PricesComponent } from '../section/prices/prices.component';
 import { PortfolioComponent } from '../section/portfolio/portfolio.component';
+import { ContactComponent } from '../section/contact/contact.component';
 
 @Component({
   selector: 'home',
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
-  imports: [CommonModule, ServicesComponent, PricesComponent, PortfolioComponent],
+  imports: [CommonModule, ServicesComponent, PricesComponent, PortfolioComponent, ContactComponent],
 })
 export class HomeComponent implements OnInit {
   private activatedRoute = inject(ActivatedRoute);

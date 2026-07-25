@@ -31,11 +31,19 @@
         margin-bottom: 0.5rem;
       }
       .img-gallery__item img {
+        transition: 300ms;
+        opacity: 0.7;
         cursor: pointer;
+        border-radius: 3px;
         display: block;
         width: clamp(200px, 24vw, 300px);
         aspect-ratio: 3/2;
         height: auto;
+        &:hover {
+          transition: 300ms;
+          opacity: 1;
+          transform: scale(1.03);
+        }
       }
     }
   }
