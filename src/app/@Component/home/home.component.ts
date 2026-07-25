@@ -3,12 +3,13 @@ import { Component, inject, OnInit, signal } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ServicesComponent } from '../section/services/services.component';
 import { PricesComponent } from '../section/prices/prices.component';
+import { PortfolioComponent } from '../section/portfolio/portfolio.component';
 
 @Component({
   selector: 'home',
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
-  imports: [CommonModule, ServicesComponent, PricesComponent],
+  imports: [CommonModule, ServicesComponent, PricesComponent, PortfolioComponent],
 })
 export class HomeComponent implements OnInit {
   private activatedRoute = inject(ActivatedRoute);

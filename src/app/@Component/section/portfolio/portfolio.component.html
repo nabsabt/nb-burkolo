@@ -1,0 +1,22 @@
+<div class="section">
+  <!--Title-->
+  <div class="title-section">
+    <div class="subtitle">
+      <div class="pseudoclass"></div>
+      <span class="txt-yellow txt-m">Néhány eddigi munkám</span>
+    </div>
+
+    <span class="txt-light txt-xxl bold">Portfólió</span>
+  </div>
+
+  <!--Gallery section-->
+  <div class="gallery-section">
+    <div id="imgGallery" #imgGallery class="img-gallery">
+      @for (img of imageUrls(); track img; let idx = $index) {
+        <a href="{{ img.imgUrl }}" class="img-gallery__item">
+          <img src="{{ img.thumbURL }}" alt="{{ img.name }}" sizes="auto" loading="lazy" />
+        </a>
+      }
+    </div>
+  </div>
+</div>

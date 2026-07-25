@@ -6,8 +6,22 @@
   flex-direction: column;
 }
 .section {
-  background-color: var(--black-bg-lighter);
+  background-color: var(--black-bg-dark);
   justify-content: center;
+
+  .subtitle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    .pseudoclass {
+      width: 40px;
+      height: 20px;
+      border-bottom: 1px solid var(--yellow-primary);
+      transform: translateY(-50%);
+    }
+  }
+
   .title-section,
   .service-cards-section {
     width: 100%;

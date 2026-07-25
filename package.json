@@ -21,6 +21,7 @@
     "@angular/platform-browser": "^22.0.0",
     "@angular/router": "^22.0.0",
     "bootstrap": "^5.3.8",
+    "photoswipe": "^5.4.4",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },

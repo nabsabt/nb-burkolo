@@ -1,0 +1,42 @@
+.section,
+.title-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
+  .subtitle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    .pseudoclass {
+      width: 40px;
+      height: 20px;
+      border-bottom: 1px solid var(--yellow-primary);
+      transform: translateY(-50%);
+    }
+  }
+  background-color: var(--black-bg-dark);
+  justify-content: center;
+  gap: 2rem;
+
+  .gallery-section {
+    .img-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      .img-gallery__item {
+        flex: 0 0 300px;
+        margin-bottom: 0.5rem;
+      }
+      .img-gallery__item img {
+        cursor: pointer;
+        display: block;
+        width: clamp(200px, 24vw, 300px);
+        aspect-ratio: 3/2;
+        height: auto;
+      }
+    }
+  }
+}
