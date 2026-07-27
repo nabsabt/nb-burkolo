@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { ModalService } from '../../../@Service/modal.service';
 
 @Component({
   selector: 'contact-section',
@@ -6,4 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './contact.component.scss',
   imports: [],
 })
-export class ContactComponent {}
+export class ContactComponent {
+  public modalService = inject(ModalService);
+}

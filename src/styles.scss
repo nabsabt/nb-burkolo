@@ -112,6 +112,18 @@ body {
 
     transform: translateY(1px);
   }
+  &:disabled {
+    background-color: var(--yellow-secondary);
+    cursor: not-allowed;
+    &:hover {
+      transition: 0;
+    }
+    &:active,
+    &.active {
+      transition: 0;
+      transform: none;
+    }
+  }
 }
 
 .primary-btn-dark {

@@ -55,7 +55,7 @@
           >
             Kapcsolat
           </button>
-          <button [routerLink]="['']" fragment="tender" class="primary-btn">Ajánlatkérés</button>
+          <button class="primary-btn" (click)="modalService.openModal()">Ajánlatkérés</button>
         </div>
       </div>
     </div>

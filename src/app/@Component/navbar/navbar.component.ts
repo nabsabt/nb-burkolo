@@ -1,5 +1,13 @@
-import { ChangeDetectionStrategy, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  ElementRef,
+  inject,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { ModalService } from '../../@Service/modal.service';
 
 @Component({
   selector: 'navbar',
@@ -11,6 +19,7 @@ import { RouterModule } from '@angular/router';
 export class Navbar implements OnInit {
   @ViewChild('navbarSupportedContent') navbarSupportedContent: ElementRef;
 
+  public modalService = inject(ModalService);
   ngOnInit(): void {}
 
   public collapseNavbar() {

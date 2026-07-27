@@ -5,15 +5,25 @@ import { ServicesComponent } from '../section/services/services.component';
 import { PricesComponent } from '../section/prices/prices.component';
 import { PortfolioComponent } from '../section/portfolio/portfolio.component';
 import { ContactComponent } from '../section/contact/contact.component';
+import { TenderModalComponent } from '../modal/modal.component';
+import { ModalService } from '../../@Service/modal.service';
 
 @Component({
   selector: 'home',
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
-  imports: [CommonModule, ServicesComponent, PricesComponent, PortfolioComponent, ContactComponent],
+  imports: [
+    CommonModule,
+    ServicesComponent,
+    PricesComponent,
+    PortfolioComponent,
+    ContactComponent,
+    TenderModalComponent,
+  ],
 })
 export class HomeComponent implements OnInit {
   private activatedRoute = inject(ActivatedRoute);
+  public modalService = inject(ModalService);
   public heroBgImgClass = signal<string>('');
   constructor() {}
   ngOnInit(): void {

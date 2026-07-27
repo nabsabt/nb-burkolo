@@ -41,3 +41,6 @@
   <portfolio-section #portfolio id="portfolio"></portfolio-section>
   <contact-section #contact id="contact"></contact-section>
 </div>
+@if (modalService.$isModalOpened()) {
+  <tender-modal></tender-modal>
+}
