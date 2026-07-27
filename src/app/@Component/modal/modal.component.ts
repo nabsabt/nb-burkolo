@@ -3,19 +3,23 @@ import { ModalService } from '../../@Service/modal.service';
 import { email, form, FormField, required } from '@angular/forms/signals';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'tender-modal',
   templateUrl: './modal.component.html',
   styleUrl: './modal.component.scss',
-  imports: [FormField, MatSelectModule, MatInputModule],
+  imports: [FormField, MatSelectModule, MatInputModule, MatSnackBarModule, CommonModule],
   providers: [],
   standalone: true,
 })
 export class TenderModalComponent implements OnInit, OnDestroy {
   public modalService = inject(ModalService);
+
   private documnet = inject(DOCUMENT);
   private renderer = inject(Renderer2);
+  private snackbar = inject(MatSnackBar);
 
   public locations = signal<Array<string>>([
     'Budapest I',
@@ -49,6 +53,8 @@ export class TenderModalComponent implements OnInit, OnDestroy {
     'Kőműves burkolás',
   ]);
 
+  public modalAnimation = signal<'open-animation' | 'close-animation' | ''>('');
+
   private formModel = signal<{
     name: string;
     location: string;
@@ -79,6 +85,7 @@ export class TenderModalComponent implements OnInit, OnDestroy {
   constructor() {}
 
   ngOnInit(): void {
+    this.modalAnimation.set('open-animation');
     this.renderer.setStyle(this.documnet.body, 'overflow', 'hidden');
   }
 
@@ -93,6 +100,23 @@ export class TenderModalComponent implements OnInit, OnDestroy {
       phone: this.formModel().phone,
     };
     console.log(formValues);
+    this.snackbar.open('Kérés elküldve!', '', {
+      duration: 3000,
+      panelClass: 'warning-snackbar',
+    });
+
+    this.onCloseModal();
+  }
+
+  /**
+   * Manage modal float-in/out animation,
+   * and open/closing modal via service->
+   */
+  public onCloseModal() {
+    setTimeout(() => {
+      this.modalService.closeModal();
+    }, 500);
+    this.modalAnimation.set('close-animation');
   }
 
   ngOnDestroy(): void {

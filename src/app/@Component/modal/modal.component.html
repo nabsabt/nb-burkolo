@@ -1,7 +1,7 @@
-<div class="modal-div">
+<div class="modal-div" [ngClass]="modalAnimation()">
   <div class="modal-dialog">
     <div class="close-button-div">
-      <img (click)="modalService.closeModal()" src="assets/icons/close.svg" />
+      <img (click)="onCloseModal()" src="assets/icons/close.svg" />
     </div>
     <hr />
     <div class="fields">
@@ -77,7 +77,7 @@
             rows="5"
             matInput
             [formField]="tenderForm.longDesc"
-            placeholder="Pl.: fürdőszoba felújítás"
+            placeholder="Pontosan mik a tervek?"
           ></textarea>
         </mat-form-field>
       </div>
@@ -87,7 +87,7 @@
       <button [disabled]="tenderForm().invalid()" (click)="onSubmitForm()" class="primary-btn">
         Küldés
       </button>
-      <button (click)="modalService.closeModal()" class="primary-btn-dark">Mégse</button>
+      <button (click)="onCloseModal()" class="primary-btn-dark">Mégse</button>
     </div>
   </div>
 </div>

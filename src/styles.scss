@@ -188,3 +188,30 @@ body {
     height: fit-content;
   }
 }
+
+//Snackbar customization->
+.warning-snackbar.mat-mdc-snack-bar-container {
+  .mdc-snackbar__surface {
+    background: var(--black-bg-lighter);
+    border: 1px solid var(--yellow-secondary);
+    .mat-mdc-button {
+      color: var(--light-text) !important;
+    }
+  }
+
+  .mat-mdc-snack-bar-label.mdc-snackbar__label {
+    color: var(--light-text) !important;
+    font-weight: 300;
+    white-space: pre-wrap;
+    font-family: 'SpaceGrotesk';
+  }
+  .mat-mdc-snack-bar-actions {
+    button {
+      border: 1px solid var(--black-bg-dark) !important;
+      background-color: rgba(39, 39, 36, 0.9) !important;
+    }
+    .mdc-button__label {
+      color: var(--yellow-primary) !important;
+    }
+  }
+}

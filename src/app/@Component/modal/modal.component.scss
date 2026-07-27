@@ -10,16 +10,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
-  animation: fadeIn 0.5s ease-out forwards;
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 .modal-dialog {
@@ -32,11 +22,9 @@
   border: 1px solid var(--grey-border);
   border-radius: 7px;
 
-  //width: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  //align-items: center;
   gap: 1rem;
 
   hr {
@@ -67,6 +55,53 @@
   }
   textarea {
     resize: none;
+  }
+}
+
+.open-animation {
+  animation: fadeIn 0.5s ease-out forwards;
+  .modal-dialog {
+    animation: floatIn 0.5s ease-in-out;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes floatIn {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.close-animation {
+  animation: fadeOut 0.5s ease-out forwards;
+  .modal-dialog {
+    animation: floatOut 0.5s ease-in-out;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes floatOut {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
   }
 }
 
