@@ -16,33 +16,33 @@ export class PortfolioComponent implements OnInit {
   private lightbox!: PhotoSwipeLightbox | undefined;
   public imageUrls = signal<Array<{ thumbURL: string; imgUrl: string; name: string }>>([
     {
-      thumbURL: '/assets/imgs/portfolio_images/minta1_thumb.webp',
-      imgUrl: '/assets/imgs/portfolio_images/minta1.webp',
+      thumbURL: 'assets/imgs/portfolio_images/minta1_thumb.webp',
+      imgUrl: 'assets/imgs/portfolio_images/minta1.webp',
       name: 'Teljes privát fürdő',
     },
     {
-      thumbURL: '/assets/imgs/portfolio_images/minta2_thumb.webp',
-      imgUrl: '/assets/imgs/portfolio_images/minta2.webp',
+      thumbURL: 'assets/imgs/portfolio_images/minta2_thumb.webp',
+      imgUrl: 'assets/imgs/portfolio_images/minta2.webp',
       name: 'Egyedi burkolás',
     },
     {
-      thumbURL: '/assets/imgs/portfolio_images/minta3_thumb.webp',
-      imgUrl: '/assets/imgs/portfolio_images/minta3.webp',
+      thumbURL: 'assets/imgs/portfolio_images/minta3_thumb.webp',
+      imgUrl: 'assets/imgs/portfolio_images/minta3.webp',
       name: 'Otthonos garzon',
     },
     {
-      thumbURL: '/assets/imgs/portfolio_images/minta4_thumb.webp',
-      imgUrl: '/assets/imgs/portfolio_images/minta4.webp',
+      thumbURL: 'assets/imgs/portfolio_images/minta4_thumb.webp',
+      imgUrl: 'assets/imgs/portfolio_images/minta4.webp',
       name: 'Retro fürdőszoba',
     },
     {
-      thumbURL: '/assets/imgs/portfolio_images/minta5_thumb.webp',
-      imgUrl: '/assets/imgs/portfolio_images/minta5.webp',
+      thumbURL: 'assets/imgs/portfolio_images/minta5_thumb.webp',
+      imgUrl: 'assets/imgs/portfolio_images/minta5.webp',
       name: 'Modern design',
     },
     {
-      thumbURL: '/assets/imgs/portfolio_images/minta6_thumb.webp',
-      imgUrl: '/assets/imgs/portfolio_images/minta6.webp',
+      thumbURL: 'assets/imgs/portfolio_images/minta6_thumb.webp',
+      imgUrl: 'assets/imgs/portfolio_images/minta6.webp',
       name: 'Világos feeling',
     },
   ]);
