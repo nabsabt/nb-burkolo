@@ -6,9 +6,9 @@ export class ModalService {
   public $isModalOpened = this.isModalOpened.asReadonly();
 
   constructor() {
-    effect(() => {
+    /*  effect(() => {
       console.log(`modalservice -> modal is ${this.isModalOpened()} `);
-    });
+    }); */
   }
 
   public openModal() {

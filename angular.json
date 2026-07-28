@@ -20,6 +20,11 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            "outputPath": {
+              "base": "docs",
+              "browser": ""
+            },
+            "index": "src/index.html",
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
@@ -38,7 +43,7 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
+                  "maximumWarning": "700kB",
                   "maximumError": "1MB"
                 },
                 {

@@ -99,7 +99,7 @@ export class TenderModalComponent implements OnInit, OnDestroy {
       email: this.formModel().email,
       phone: this.formModel().phone,
     };
-    console.log(formValues);
+    //console.log(formValues);
     this.snackbar.open('Kérés elküldve!', '', {
       duration: 3000,
       panelClass: 'warning-snackbar',
